@@ -1,0 +1,3 @@
+[submodule "wp/themes/san"]
+	path = wp/themes/san
+	url = https://github.com/KaivnD/san-api.git
