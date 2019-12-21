@@ -8,7 +8,7 @@
     "moduleResolution": "node",
     "lib": ["esnext", "esnext.asynciterable", "dom"],
     "esModuleInterop": true,
-    "allowJs": true,
+    "allowJs": false,
     "sourceMap": true,
     "strict": true,
     "noEmit": true,
@@ -20,7 +20,7 @@
       "@@/*": ["./*"]
     },
     "typeRoots": ["./types"],
-    "types": ["@types/node", "@nuxt/types", "vuetify"]
+    "types": ["@types/node", "@nuxt/types", "@nuxtjs/vuetify"]
   },
   "exclude": ["node_modules", ".nuxt", "dist"]
 }

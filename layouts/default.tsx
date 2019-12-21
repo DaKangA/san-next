@@ -14,6 +14,10 @@ export default class extends Vue {
     {
       name: '1',
       icon: '1'
+    },
+    {
+      name: 'tree',
+      icon: 'asdf'
     }
   ]
 
@@ -43,7 +47,7 @@ export default class extends Vue {
 
         <v-content>
           <v-container class="fill-height">
-            <Nuxt></Nuxt>
+            <nuxt />
           </v-container>
         </v-content>
       </v-app>

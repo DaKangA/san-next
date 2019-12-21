@@ -32,7 +32,7 @@ module.exports = {
    ** Plugins to load before mounting the App
    */
   plugins: [],
-  extensions: ['ts', 'tsx', 'js'],
+  extensions: ['ts', 'tsx'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -42,7 +42,12 @@ module.exports = {
     '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
-    '@nuxtjs/vuetify'
+    [
+      '@nuxtjs/vuetify',
+      {
+        component: {}
+      }
+    ]
   ],
   /*
    ** Nuxt.js modules
@@ -64,6 +69,8 @@ module.exports = {
    ** https://github.com/nuxt-community/vuetify-module
    */
   vuetify: {
+    treeShake: false,
+    optionsPath: './vuetify.options.js',
     customVariables: ['~/assets/variables.scss'],
     theme: {
       dark: false,
@@ -87,6 +94,14 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
-    extend(config: any, ctx: any) {}
+    // extend(config: any, ctx: any) {},
+    typescript: {
+      typeCheck: false
+    }
+  },
+  typescript: {
+    typeCheck: {
+      eslint: true
+    }
   }
 }
