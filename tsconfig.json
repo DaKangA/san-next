@@ -20,7 +20,7 @@
       "@@/*": ["./*"]
     },
     "typeRoots": ["./types"],
-    "types": ["@types/node", "@nuxt/types", "@nuxtjs/vuetify"]
+    "types": ["@types/node", "@nuxt/types", "@nuxtjs/vuetify", "@types/jest"]
   },
   "exclude": ["node_modules", ".nuxt", "dist"]
 }

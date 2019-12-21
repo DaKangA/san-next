@@ -30,7 +30,7 @@ export class Demo extends Component<IDemo> {
   }
 
   public created() {
-    console.log(this.$parent)
+    // console.log(this.$parent)
   }
 
   protected render(): VNode {

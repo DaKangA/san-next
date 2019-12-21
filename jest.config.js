@@ -4,14 +4,12 @@ module.exports = {
     '^~/(.*)$': '<rootDir>/$1',
     '^vue$': 'vue/dist/vue.common.js'
   },
-  moduleFileExtensions: ['js', 'vue', 'json'],
+  roots: ['<rootDir>'],
+  testRegex: '(.+)\\.test\\.(js?|ts?)$',
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   transform: {
-    '^.+\\.js$': 'babel-jest',
+    '^.+\\.ts': 'ts-jest',
+    '^.+\\.tsx': 'babel-jest',
     '.*\\.(vue)$': 'vue-jest'
-  },
-  collectCoverage: true,
-  collectCoverageFrom: [
-    '<rootDir>/components/**/*.vue',
-    '<rootDir>/pages/**/*.vue'
-  ]
+  }
 }
