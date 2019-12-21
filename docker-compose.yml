@@ -1,0 +1,10 @@
+version: '3.1'
+
+services:
+  frontend:
+    build: .
+    working_dir: '/app'
+    ports:
+      - '${NUXT_PORT-:8388}:3000'
+    networks:
+      - san

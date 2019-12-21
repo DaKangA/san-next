@@ -1,0 +1,56 @@
+version: '3.1'
+
+services:
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: ${DB_NAME:-exampledb}
+      MYSQL_USER: ${DB_USER:-exampleuser}
+      MYSQL_PASSWORD: ${DB_PASS:-examplepass}
+      MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
+    volumes:
+      - ./.db:/var/lib/mysql
+    networks:
+      - san
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    depends_on:
+      - db
+    restart: always
+    ports:
+      - '${DB_ADMIN_PORT-:8383}:80'
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: '1'
+    networks:
+      - san
+
+  wordpress:
+    image: wordpress:5.3.0-php7.2-apache
+    depends_on:
+      - db
+    restart: always
+    ports:
+      - '${WP_PORT-:8386}:80'
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: ${DB_USER:-exampleuser}
+      WORDPRESS_DB_PASSWORD: ${DB_PASS:-examplepass}
+      WORDPRESS_DB_NAME: ${DB_NAME:-exampledb}
+      WORDPRESS_CONFIG_EXTRA: |
+        define("FS_METHOD","direct");
+        define("FS_CHMOD_DIR",0777);
+        define("FS_CHMOD_FILE",0777);
+    volumes:
+      - ./wp:/var/www/html/wp-content
+    networks:
+      - san
+
+networks:
+  san:
+
+volumes:
+  wp:
+  .db:
