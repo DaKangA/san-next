@@ -88,3 +88,10 @@ sw.*
 
 # Vim swap files
 *.swp
+
+.db
+
+/wp/*
+!/wp/themes/
+/wp/themes/*
+!/wp/themes/san/
