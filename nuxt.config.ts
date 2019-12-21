@@ -32,10 +32,12 @@ module.exports = {
    ** Plugins to load before mounting the App
    */
   plugins: [],
+  extensions: ['ts', 'tsx', 'js'],
   /*
    ** Nuxt.js dev-modules
    */
   buildModules: [
+    '@nuxt/typescript-build',
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/stylelint-module
@@ -85,6 +87,6 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config: any, ctx: any) {}
   }
 }
