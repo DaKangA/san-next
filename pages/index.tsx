@@ -1,12 +1,13 @@
 import { Component, Vue } from 'vue-property-decorator'
 import '@/styles/index.scss'
+import { Demo } from '../components/demo'
 
 @Component
 export default class extends Vue {
   protected render() {
     return (
       <div class="about">
-        <h1>This is an Home page</h1>
+        <Demo ref="demo"></Demo>
       </div>
     )
   }
