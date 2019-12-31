@@ -1,5 +1,4 @@
 import { Component, Vue } from 'vue-property-decorator'
-import '@/styles/index.scss'
 import { Demo } from '../components/demo'
 
 @Component

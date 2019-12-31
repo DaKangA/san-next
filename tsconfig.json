@@ -15,11 +15,11 @@
     "baseUrl": ".",
     "paths": {
       "~/*": ["./*"],
-      "@/*": ["./*"],
+      "@/*": ["./src/*"],
       "~~/*": ["./*"],
       "@@/*": ["./*"]
     },
-    "typeRoots": ["./types"],
+    "typeRoots": ["src/types"],
     "types": ["@types/node", "@nuxt/types", "@nuxtjs/vuetify", "@types/jest"]
   },
   "exclude": ["node_modules", ".nuxt", "dist"]

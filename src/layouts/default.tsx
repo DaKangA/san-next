@@ -1,5 +1,6 @@
 import { VNode } from 'vue'
 import { Component, Vue } from 'vue-property-decorator'
+import '@/styles/main.scss'
 
 declare interface NavItem {
   name: string
@@ -41,7 +42,7 @@ export default class extends Vue {
         >
           <v-app-bar-nav-icon small onClick={this.OnNavBtnClick} />
           <v-toolbar-title class="mr-12 align-center">
-            <span class="title">NCFZ</span>
+            <v-img src="\logo.svg" width="76" contain></v-img>
           </v-toolbar-title>
         </v-app-bar>
 

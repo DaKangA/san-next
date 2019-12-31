@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 258 70">
+  <title>NCFZ</title>
+  <g>
+    <polygon fill="white" points="258 70 258 62 219 62 258 0 248 0 204 70 258 70 258 70"/>
+    <polygon fill="white" points="231 8 236 0 204 0 204 8 231 8 231 8"/>
+    <path fill="white" d="M54,70V0H48V53.5L0,0V9L54,70ZM0,70V28l6,7V70Z"/>
+    <polygon fill="#eb631e" points="167 16 159 16 159 39 136 39 136 47 159 47 159 70 167 70 167 47 190 47 190 39 167 39 167 16 167 16"/>
+    <polygon fill="white" points="159 8 159 0 190 0 190 8 159 8 159 8"/>
+    <path fill="white" d="M122,0V8H103a27,27,0,0,0,0,54h19v8H103a35,35,0,0,1,0-70Z"/>
+  </g>
+</svg>
