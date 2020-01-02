@@ -1,7 +1,7 @@
 import { Component as VueComponent, Prop, Watch } from 'vue-property-decorator'
 import { Component } from 'vue-tsx-support'
-import '@/styles/demo.scss'
 import { VNode } from 'vue'
+import '@/styles/demo.scss'
 
 export interface IDemo {
   /**
