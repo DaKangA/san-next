@@ -2,7 +2,7 @@ import { VNode } from 'vue'
 import { Component, Vue } from 'vue-property-decorator'
 import '@/styles/main.scss'
 
-declare interface NavItem {
+export interface NavItem {
   name: string
   icon: string
 }
