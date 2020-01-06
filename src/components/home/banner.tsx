@@ -47,20 +47,20 @@ export class Banner extends Component<IBanner> {
 
   public bannerItems: BannerItem[] = [
     {
-      title: '轮播标题1',
-      subtitle: '轮播小标题1',
+      title: '诺亚｜Noah',
+      subtitle: '点击进入｜开源公测启动！',
       img: getRandImage(1920, 1080),
       url: ''
     },
     {
-      title: '轮播标题2',
-      subtitle: '轮播小标题2',
+      title: '新课发布｜智能化设计教程',
+      subtitle: '点击进入｜了解详情',
       img: getRandImage(1920, 1080),
       url: ''
     },
     {
-      title: '轮播标题3',
-      subtitle: '轮播小标题2',
+      title: '陪跑｜参数化设计技能培训',
+      subtitle: '点击进入｜每月发车',
       img: getRandImage(1920, 1080),
       url: ''
     }
@@ -68,13 +68,17 @@ export class Banner extends Component<IBanner> {
 
   private get BannerItems(): VNode[] {
     return this.bannerItems.map((item) => {
-      const { title, img } = item
+      const { title, subtitle, img } = item
       return (
         <v-carousel-item>
           <v-img height="100%" tile src={img.replace(IMG_RAND_HOLDER, title)}>
             <v-row class="fill-height" align="center" justify="center">
-              <div class="display-3">{title}</div>
+              <div class="text-center carousel-caption">
+                <p class="display-1">{title}</p>
+                <p class="headline">{subtitle}</p>
+              </div>
             </v-row>
+            <div class="mask rgba-black-strong"></div>
           </v-img>
         </v-carousel-item>
       )
@@ -84,7 +88,9 @@ export class Banner extends Component<IBanner> {
   protected render(): VNode {
     return (
       <div class="banner" style={`background-color: ${this.color};`}>
-        <v-carousel>{this.BannerItems}</v-carousel>
+        <v-carousel cycle hide-delimiters>
+          {this.BannerItems}
+        </v-carousel>
       </div>
     )
   }
