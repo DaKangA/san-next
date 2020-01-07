@@ -47,9 +47,7 @@ export default class extends Vue {
         </v-app-bar>
 
         <v-content>
-          <v-container class="fill-height">
-            <nuxt />
-          </v-container>
+          <nuxt />
         </v-content>
       </v-app>
     )

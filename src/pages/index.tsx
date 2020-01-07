@@ -1,7 +1,7 @@
 import { Component, Vue } from 'vue-property-decorator'
-import { Banner } from '../components/home/banner'
+import { Banner } from '../components/home/Banner'
 import '@/styles/index.scss'
-import { HeaderTitle } from '../components/home/headerTitle'
+import { Now } from '../components/home/Now'
 
 export interface HomePageSetting {
   bannerMaskColor: string
@@ -13,12 +13,8 @@ export default class extends Vue {
   protected render() {
     return (
       <div id="home-content">
-        <section id="banner">
-          <Banner color="#323232" opacity={0.2} showArrow={true}></Banner>
-        </section>
-        <section id="now">
-          <HeaderTitle color="#323232"></HeaderTitle>
-        </section>
+        <Banner />
+        <Now class="my-5" />
       </div>
     )
   }
